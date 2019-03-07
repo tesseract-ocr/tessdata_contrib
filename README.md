@@ -1,3 +1,3 @@
 # tessdata_contrib
 
-User contributed (non google) data repository
+User contributed (non Google) data repository for Tesseract 4.
