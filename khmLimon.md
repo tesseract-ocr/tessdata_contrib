@@ -3,11 +3,11 @@
 * Language - Khmer
 * Langcode - khmLimon
 * Type of training - Finetune using new fonts
-* Contributed by - @phyrumsk
+* Contributed by - [@phyrumsk](https://github.com/phyrumsk)
 
 ## Training Procedure 
 
-@phyrumsk from Open Institute Cambodia  finetuned the tesseract_best engine with 6 new Limon fonts such as Limon S1, S2, F1, F2, R1, R2 using the same tesseract netspec.
+[@phyrumsk](https://github.com/phyrumsk) from [Open Institute Cambodia](https://github.com/OpenInstituteCambodia) finetuned the [tesseract_best engine](https://github.com/OpenInstituteCambodia/tessdata_best) with 6 new Limon fonts such as Limon S1, S2, F1, F2, R1, R2 using the same tesseract netspec.
 
 The accuracy reports show that there is over 10% improvement in the recognition on newly finetuned fonts without any appreciable loss in accuracy for the earlier list.
 
