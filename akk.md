@@ -2,16 +2,16 @@
 
 ## Model card
 
-| Language         | Akkadian                                                                                          |
-| Language code    | akk                                                                                               |
-| Type of training | finetuning for LSTM models, training for legacy model                                             |
-| Contributed by   | [@Shreeshrii](https://github.com/Shreeshrii) and [@wincentbalin](https://github.com/wincentbalin) |
+* Language - Akkadian
+* Language code - akk
+* Type of training - finetuning for LSTM models, training for legacy model
+* Contributed by - [@Shreeshrii](https://github.com/Shreeshrii) and [@wincentbalin](https://github.com/wincentbalin)
 
 ## Model files
 
-| LSTM model      | [akk.traineddata](best/akk.traineddata)   |
-| Fast LSTM model | [akk.traineddata](fast/akk.traineddata)   |
-| Legacy model    | [akk.traineddata](legacy/akk.traineddata) |
+* LSTM model - [akk.traineddata](best/akk.traineddata)
+* Fast LSTM model - [akk.traineddata](fast/akk.traineddata)
+* Legacy model - [akk.traineddata](legacy/akk.traineddata)
 
 ## Training Procedure 
 
