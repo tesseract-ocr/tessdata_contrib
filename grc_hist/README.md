@@ -1,6 +1,6 @@
 # grc_hist: a tesseract model for historical documents written in (polytonic) greek
 
-`grc_hist` was developed in the context of the project [AjaxMultiCommentary](https://github.com/AjaxMultiCommentary/). It our best tesseract model for recognition of historical documents written in (polytonic) greek. 
+`grc_hist` was developed in the context of the project [AjaxMultiCommentary](https://github.com/AjaxMultiCommentary/). It is our best Tesseract model for recognition of historical documents written in (polytonic) greek. 
 
 **Training.** This model starts from `grc`, updates its dictionary and was fine-tuned with 35K+ of real-life ground-truth lines for 40 epochs. This model is the best checkpoint on our evaluation data and was produced at epoch 23. 
 
