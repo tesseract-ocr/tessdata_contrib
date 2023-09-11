@@ -28,4 +28,4 @@ LANGDATA_DIR=/your/lib/langdata_lstm/dir/ TESSDATA=/your/tessdata_best/dir/ DATA
 
 
 
-**Usage**. The model could be of great value for library, researchers and anyone interested in historical greek documents. 
+**Usage**. The model could be of great value for libraries, researchers and anyone interested in historical greek documents. 
