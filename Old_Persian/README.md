@@ -1,3 +1,5 @@
+# op.traineddata
+
 ## tesseract_old_persian:
 
 The aim of this project is creating an OCR model (convert image to text) to translate Old Persian Cuneiform.
