@@ -1,9 +1,11 @@
 ## tesseract_old_persian:
 
+The aim of this project is creating an OCR model (convert image to text) to translate Old Persian Cuneiform.
 
+This project is inspired from [eBL project](https://github.com/ElectronicBabylonianLiterature) and is a part of [
+Electronic Old Persian Library](https://github.com/Electronic-Old-Persian-Library) organization.
 
-This tesseract pre-trained OCR model converts Old Persian cuneiform to English transcription and is developed by [S. Muhammad Hossein Mousavi](https://github.com/SeyedMuhammadHosseinMousavi/Extracting-Old-Persian-Cuneiform/tree/main
-).
+This tesseract pre-trained OCR model converts Old Persian cuneiform to English transcription.
 
 Notebook: https://github.com/Melanee-Melanee/tessdata_contrib/blob/main/Old_Persian/Tesseract_Old_Persian_OCR.ipynb
 
@@ -11,7 +13,7 @@ Please replace ```op.traineddata``` file in this directory: `/usr/share/tesserac
 
 
 
-An example: 
+## An example: 
 
 The last 12 lines of the great Darius's inscription in Persepolis, [DPd inscription](https://www.livius.org/sources/content/achaemenid-royal-inscriptions/dpd/):
 
@@ -69,4 +71,4 @@ I wrote an [article](https://www.researchgate.net/publication/382528886_Translat
 
 ## Notice
 
-This repository is still under developing. For contributing contact me by email: melaneepython@gmail.com 
+This [project](https://github.com/Melanee-Melanee/Old-Persian-Cuneiform-OCR) is still under developing. For contributing contact me by email: melaneepython@gmail.com 
