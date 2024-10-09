@@ -4,8 +4,7 @@
 
 The aim of this project is creating an OCR model (convert image to text) to translate Old Persian Cuneiform.
 
-This project is inspired from [eBL project](https://github.com/ElectronicBabylonianLiterature) and is a part of [
-Electronic Old Persian Library](https://github.com/Electronic-Old-Persian-Library) organization.
+This model is a part of [Electronic Old Persian Library](https://github.com/Electronic-Old-Persian-Library) organization.
 
 This tesseract pre-trained OCR model converts Old Persian cuneiform to English transcription and is developed by [S. Muhammad Hossein Mousavi](https://github.com/SeyedMuhammadHosseinMousavi/Extracting-Old-Persian-Cuneiform/tree/main
 ).
