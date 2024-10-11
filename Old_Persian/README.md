@@ -11,13 +11,13 @@ This tesseract pre-trained OCR model converts Old Persian cuneiform to English t
 ## Notebook: 
 https://github.com/Melanee-Melanee/tessdata_contrib/blob/main/Old_Persian/Tesseract_Old_Persian_OCR.ipynb
 
-Please replace ```op.traineddata``` file in this directory: `/usr/share/tesseract-ocr/4.00/tessdata`
+Please place ```op.traineddata``` file in this directory: `/usr/share/tesseract-ocr/4.00/tessdata` (or the `tessdata` directory matching your installation of Tesseract).
 
 
 
 ## An example: 
 
-The last 12 lines of the great Darius's inscription in Persepolis, [DPd inscription](https://www.livius.org/sources/content/achaemenid-royal-inscriptions/dpd/):
+The last 12 lines of the Great Darius' inscription in Persepolis, [DPd inscription](https://www.livius.org/sources/content/achaemenid-royal-inscriptions/dpd/):
 
 Input:
 
