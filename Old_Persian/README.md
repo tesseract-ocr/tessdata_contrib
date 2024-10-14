@@ -11,7 +11,7 @@ This tesseract pre-trained OCR model converts Old Persian cuneiform to English t
 ## Notebook: 
 https://github.com/Melanee-Melanee/Old-Persian-Cuneiform-OCR/blob/master/tesseract_old_persian/Tesseract_Old_Persian_OCR.ipynb
 
-Please place ```peo.traineddata``` file in this directory: `/usr/share/tesseract-ocr/4.00/tessdata` (or the `tessdata` directory matching your installation of Tesseract).
+
 
 
 
