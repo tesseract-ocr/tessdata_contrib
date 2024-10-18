@@ -13,7 +13,7 @@
 * Fast LSTM model - [akk.traineddata](fast/akk.traineddata)
 * Legacy model - [akk.traineddata](legacy/akk.traineddata)
 
-## Training Procedure 
+## Training Procedure
 
 Training was performed by [@Shreeshrii](https://github.com/Shreeshrii) and [@wincentbalin](https://github.com/wincentbalin).
 
