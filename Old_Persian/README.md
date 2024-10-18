@@ -8,14 +8,14 @@ This tesseract pre-trained OCR model (version 3 - for Legacy engine) converts Ol
 ).
 
 
-## Notebook: 
+## Notebook:
 https://github.com/Melanee-Melanee/Old-Persian-Cuneiform-OCR/blob/master/tesseract_old_persian/Tesseract_Old_Persian_OCR.ipynb
 
 
 
 
 
-## An example: 
+## An example:
 
 The last 12 lines of the Great Darius' inscription in Persepolis, [DPd inscription](https://www.livius.org/sources/content/achaemenid-royal-inscriptions/dpd/):
 
@@ -73,4 +73,4 @@ I wrote an [article](https://www.researchgate.net/publication/382528886_Translat
 
 ## Notice
 
-This [project](https://github.com/Melanee-Melanee/Old-Persian-Cuneiform-OCR) is still under developing. For contributing contact me by email: melaneepython@gmail.com 
+This [project](https://github.com/Melanee-Melanee/Old-Persian-Cuneiform-OCR) is still under developing. For contributing contact me by email: melaneepython@gmail.com
