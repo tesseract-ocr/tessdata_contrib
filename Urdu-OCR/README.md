@@ -68,10 +68,10 @@ To visually demonstrate the performance difference, here is a comparison using a
 
 | Model             | Output Image                                       |
 | :---------------- | :------------------------------------------------- |
-| Standard `urd`    | ![Standard urd model output](DIRECT_LINK_TO_URD_OUTPUT_IMAGE) <br> *(Original Link: https://drive.google.com/file/d/19URq0GefJW800Y9vx6hvq7WnaHQ4tgoU/view?usp=drive_link)* |
-| Improved `urd_naw`| ![Improved urd_naw model output](DIRECT_LINK_TO_URD_NAW_OUTPUT_IMAGE) <br> *(Original Link: https://drive.google.com/file/d/1JpIFNyTlDRofG3XB2o8kzPhUzNDzPQM5/view?usp=drive_link)* |
+| Standard `urd`    | سے تو دی یں ف تھی ,جس دسیان اپ جما لکا اس ےکیا خر مرے شو قکیء اس ےکرا ین مرے عا لکا |
+| Improved `urd_naw`| جے خودہی نہیں فر تیں، جس دھیان اپنے جمال کا اسے کیاخبر مرے شوق کی، اسے کیاپنہ مرے حال کا |
 
-*(Observation: [Optional: Add specific observations about the improvements here, e.g., fewer character errors, better word segmentation in the `urd_naw` output].)*
+**Observation:** The `urd_naw` model demonstrates notably fewer character-level errors and significantly improved word segmentation. Complex ligatures and diacritics are more accurately recognized, resulting in a more coherent and readable output compared to the standard `urd` model.
 
 ## 📜 License
 
