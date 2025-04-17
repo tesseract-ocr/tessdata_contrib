@@ -60,8 +60,9 @@ To visually demonstrate the performance difference, here is a comparison using a
 
 **Test Image:**
 
-![Test Urdu Image](DIRECT_LINK_TO_TEST_IMAGE)
-*(Original Link: https://drive.google.com/file/d/1V79mvQU8WG92S1ThiM0-yVNE6ZROPWxd/view?usp=drive_link)*
+![Test Urdu Image](https://nawadiraat.org/images/ocr-image.jpg)
+
+*(Original Link: https://nawadiraat.org/images/ocr-image.jpg)*
 
 **Model Output Comparison:**
 
