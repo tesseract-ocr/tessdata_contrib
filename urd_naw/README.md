@@ -1,6 +1,6 @@
-# Urdu OCR - Improved Tesseract Model
+# urd_naw - Improved Tesseract Model for Urdu OCR
 
-This repository provides an enhanced Tesseract OCR model (`urd_naw`) specifically trained for improved text extraction from Urdu script images. This custom model demonstrates significantly better performance compared to the standard Tesseract Urdu model (`urd.traineddata`).
+This repository provides an enhanced Tesseract OCR model (`urd_naw`) specifically trained for improved text extraction from Urdu script images. This custom model demonstrates significantly better performance compared to the standard Tesseract Urdu model (`urd`).
 
 ## 📚 Training Dataset
 
@@ -68,7 +68,7 @@ To visually demonstrate the performance difference, here is a comparison using a
 
 | Model             | Output Image                                       |
 | :---------------- | :------------------------------------------------- |
-| Standard `urd`    | سے تو دی یں ف تھی ,جس دسیان اپ جما لکا اس ےکیا خر مرے شو قکیء اس ےکرا ین مرے عا لکا |
+| Default `urd`    | سے تو دی یں ف تھی ,جس دسیان اپ جما لکا اس ےکیا خر مرے شو قکیء اس ےکرا ین مرے عا لکا |
 | Improved `urd_naw`| جے خودہی نہیں فر تیں، جس دھیان اپنے جمال کا اسے کیاخبر مرے شوق کی، اسے کیاپنہ مرے حال کا |
 
 **Observation:** The `urd_naw` model demonstrates notably fewer character-level errors and significantly improved word segmentation. Complex ligatures and diacritics are more accurately recognized, resulting in a more coherent and readable output compared to the standard `urd` model.
