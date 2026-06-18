@@ -44,8 +44,7 @@ Training ran for **100,000 iterations** on an Apple M1 Max (single-threaded CPU,
 
 The full training pipeline, corpus-building scripts, and reproducibility notes are
 available at:
-[github.com/ofdn/tesseract-training-odia](https://github.com/ofdn/tesseract-training-odia)
-*(repository to be made public alongside this PR)*
+[github.com/ofdn/tessdata_contrib](https://github.com/ofdn/tessdata_contrib)
 
 ## Results
 
