@@ -44,3 +44,27 @@ sat/
 | `sat/scripts/05-test.sh` | Tests the trained model on evaluation inputs. |
 | `sat/scripts/06-scan-to-lstmf.py` | Converts scan inputs into LSTMF-ready training material. |
 | `sat/test-images/` | Holds sample images, including Wikisource-derived book materials used for training and testing. |
+
+## Training workflow
+
+The training workflow is split into small, reusable stages so contributors can inspect, modify, or rerun individual steps.
+
+1. Prepare the base model and training environment.
+2. Clean and render the corpus into image and ground-truth pairs.
+3. Generate `.lstmf` files.
+4. Train and package updated model outputs.
+5. Test the resulting model on sample images.
+
+## Corpus preparation
+
+The `corpus/` folder contains the text sources and utilities used to prepare training material.
+
+- `clean-corpus.py` helps clean mixed-script text before it is used for OCR training.
+- `render-corpus.py` creates PNG images and matching `gt.txt` files using fonts supplied by the user.
+- The current workflow uses Noto Sans Ol Chiki and Guru Gomke, both open-source fonts, for rendering training material.
+
+## Test material
+
+The `test-images/` folder contains books from Wikisource that were used during training and evaluation. These source materials helped ground the model against real printed examples rather than only synthetic samples. Additionally, Santali text were taken from three sources: Chapter 1 (Consent, Content Rights and Content Licensing) of [OpenSpeaks](https://en.wikiversity.org/wiki/OpenSpeaks/sat), originally authored by Subhashish Panigrahi and translated into Santali by R Ashwani Banjan Murmu, Fagu Baskey, and Joy Sagar Murmu, Santali Wikisource article on [Pandit Raghunath Murmu](https://w.wiki/D$AN) and the the [Community Language Documentation & Archiving Training](https://w.wiki/ReCS) (translated by Bodi Baski)—all in CC BY SA 4.0 License.
+
+Ramjit Tudu guided the selection and use of books from [Wikisource](https://wikisource.org/wiki/Category:%E1%B1%A5%E1%B1%9F%E1%B1%B1%E1%B1%9B%E1%B1%9F%E1%B1%B2%E1%B1%A4), which are in CC BY-SA 4.0 licenses, for this training effort. Prasanta Hembram tested interim models and also advised during the training process. Both Ramjit and Prasanta have trained Tesseract before.
