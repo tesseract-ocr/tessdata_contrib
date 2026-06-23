@@ -5,3 +5,5 @@
 This is the first LSTM-based model for Ol Chiki.
 
 The repository is structured so that the current best-trained data file, corpus preparation utilities, training scripts, and test materials are all helpful for reproducing the output. The current base checkpoint is `sat.traineddata` inside `sat/best/`, and that file will be updated as training improves. If you are improving `sat.traineddata` through training, we request you to submit it as a PR here so others can use and build on that.
+
+The model is trained using open-source fonts including **Noto Sans Ol Chiki** and [**Guru Gomke**](https://github.com/GuruGomke). These fonts are also used in corpus rendering for training data generation.
