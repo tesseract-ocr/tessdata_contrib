@@ -94,7 +94,6 @@ hoc/
 │   └── check-plateau.sh         # Training plateau detection
 ├── test-images/benchmark/       # Scan images + ground truth for testing
 ├── pua_mapping.json             # Warang Citi ↔ PUA mapping
-├── SESSION_HANDOFF.md           # Technical handoff with training history
 └── README.md
 ```
 
