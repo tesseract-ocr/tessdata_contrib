@@ -68,3 +68,9 @@ The `corpus/` folder contains the text sources and utilities used to prepare tra
 The `test-images/` folder contains books from Wikisource that were used during training and evaluation. These source materials helped ground the model against real printed examples rather than only synthetic samples. Additionally, Santali text were taken from three sources: Chapter 1 (Consent, Content Rights and Content Licensing) of [OpenSpeaks](https://en.wikiversity.org/wiki/OpenSpeaks/sat), originally authored by Subhashish Panigrahi and translated into Santali by R Ashwani Banjan Murmu, Fagu Baskey, and Joy Sagar Murmu, Santali Wikisource article on [Pandit Raghunath Murmu](https://w.wiki/D$AN) and the the [Community Language Documentation & Archiving Training](https://w.wiki/ReCS) (translated by Bodi Baski)—all in CC BY SA 4.0 License.
 
 Ramjit Tudu guided the selection and use of books from [Wikisource](https://wikisource.org/wiki/Category:%E1%B1%A5%E1%B1%9F%E1%B1%B1%E1%B1%9B%E1%B1%9F%E1%B1%B2%E1%B1%A4), which are in CC BY-SA 4.0 licenses, for this training effort. Prasanta Hembram tested interim models and also advised during the training process. Both Ramjit and Prasanta have trained Tesseract before.
+
+## Usage
+
+Install the `sat.traineddata` file into your Tesseract tessdata directory and run Tesseract with the `sat` model name as appropriate for your local setup.
+
+As the model improves, replace the current file in `sat/best/` with the latest `sat.traineddata` output and keep the rest of the workflow unchanged.
