@@ -84,4 +84,4 @@ Additional contributions:
 - Prasanta Hembram (testing interim models and advising during the training process)
 
 ## License
-MI License
+MIT License
