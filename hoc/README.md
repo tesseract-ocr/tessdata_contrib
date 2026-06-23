@@ -114,4 +114,4 @@ hoc-tesseract-training/
 ## Related
 
 - [Santali (Ol Chiki) training](../sat-tesseract-training/) — sister project, same approach
-- [OpenSpeaks](https://openspeaks.com/) — community network for Indigenous language documentation
+- [OpenSpeaks](https://meta.wikimedia.org/wiki/OpenSpeaks/Tools) — community network for Indigenous language documentation
