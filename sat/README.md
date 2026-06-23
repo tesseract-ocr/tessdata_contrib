@@ -28,3 +28,19 @@ sat/
 │   └── 06-scan-to-lstmf.py
 └── test-images/
 ```
+## File and folder map
+
+| Path | Purpose |
+|------|---------|
+| `sat/best/ori_hist.traineddata` | Current best model checkpoint used as the base for testing, sharing, and future fine-tuning. This file will be updated as training improves. |
+| `sat/corpus/clean-corpus.py` | Cleans mixed-script Santali text before training preparation. |
+| `sat/corpus/render-corpus.py` | Renders corpus text into training image assets such as PNG files and matching `gt.txt` ground-truth files using user-supplied fonts. |
+| `sat/corpus/sat_corpus.txt` | Source corpus text used in training preparation. |
+| `sat/corpus/sat_corpus2_clean.txt` | Cleaned corpus text prepared for rendering and training workflows. |
+| `sat/scripts/01-prep-base.sh` | Prepares the base training setup. |
+| `sat/scripts/02-make-lstmf.sh` | Generates LSTMF training files. |
+| `sat/scripts/03-train.sh` | Runs model fine-tuning or training. |
+| `sat/scripts/04-package.sh` | Packages the trained output into distributable model artifacts. |
+| `sat/scripts/05-test.sh` | Tests the trained model on evaluation inputs. |
+| `sat/scripts/06-scan-to-lstmf.py` | Converts scan inputs into LSTMF-ready training material. |
+| `sat/test-images/` | Holds sample images, including Wikisource-derived book materials used for training and testing. |
