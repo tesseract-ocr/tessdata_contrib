@@ -74,3 +74,14 @@ Ramjit Tudu guided the selection and use of books from [Wikisource](https://wiki
 Install the `sat.traineddata` file into your Tesseract tessdata directory and run Tesseract with the `sat` model name as appropriate for your local setup.
 
 As the model improves, replace the current file in `sat/best/` with the latest `sat.traineddata` output and keep the rest of the workflow unchanged.
+
+## Attribution
+
+Coordination and model training: Subhashish Panigrahi.
+
+Additional contributions:
+- Ramjit Tudu (Wikisource books guidance)
+- Prasanta Hembram (testing interim models and advising during the training process)
+
+## License
+MI License
