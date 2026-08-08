@@ -13,5 +13,3 @@ The code here is under the Apache licence 2.0. `LICENSE` is the terms; `NOTICE` 
 **Tesseract**, © Google Inc. and contributors, Apache licence 2.0. orus descends from its `rus` model, and both build scripts lift 667 punctuation and 222 number patterns out of stock `rus` besides.
 
 Both models are accordingly combined derivatives of three Apache-2.0 works, since the word list is available under Apache-2.0 by the dual licence above. Each may therefore be redistributed under that one licence, satisfied by shipping `LICENSE` and `NOTICE` with it. Taking the word list under MIT instead is still permitted and then the MIT notice travels too. Neither restricts the use. The two models differ in one way that matters to the licence and is recorded in `NOTICE`: `orusd` copies the `orus` recogniser byte for byte, whereas in `ru-petr1708` every weight in the network is liable to have changed.
-
-The code is documentation of a method as much as it is a library. Every threshold in it is the calibration of one corpus of twenty-five books, and the two that most need re-measuring before use elsewhere are `quality.LONG_SHARE` and `glyph.THRESH`.
