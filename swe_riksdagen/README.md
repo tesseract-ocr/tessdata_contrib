@@ -31,3 +31,22 @@ The model is a domain-specific experiment rather than a claim of general
 Swedish OCR improvement. Training data provenance, manual review status, and
 the complete reproducibility package should be reviewed before this model is
 accepted upstream.
+
+## Reproducibility
+
+The training scripts, source-selection notes, benchmark JSON, and exact
+checksum are available at
+<https://github.com/yeager/paperless-swedish-ocr>. The source document service
+is <https://data.riksdagen.se/>; source PDFs are not redistributed in this
+repository. The PDF text layer was used to create geometrically aligned line
+facit, and the result was visually spot-checked. The complete training set
+has not been manually proofread, so this model should remain classified as
+experimental until that review is complete.
+
+The model file SHA-256 is:
+
+`30d0834d341a32c7a4c19fbc2e3c4456abb0d4e8f23441cc703673a62c58ed8d`
+
+The benchmark repository also records a document-specific upper-right logo
+mask that lowers CER to 0.127% on the test set, but raises WER to 1.417%.
+That preprocessing is not part of this general domain model.
