@@ -1,0 +1,163 @@
+prereform — OCR for pre-1918 Russian print
+Copyright 2026 Danslav Slavenskoj
+
+Licensed under the Apache License, Version 2.0. See the LICENSE file for the
+full terms.
+
+This NOTICE covers `prereform/`, `tools/` and `examples/`. It also records the
+third-party works combined by `tools/build_orusd.sh` and by
+`tools/build_ru_petr1708.sh`, because the files those scripts write —
+`orusd.traineddata` and `ru-petr1708.traineddata` — are derivative works of all
+three, and anyone who redistributes them carries their terms forward.
+
+The two models differ in a way that matters to the licence. `orusd` copies the
+orus recogniser byte for byte and changes only the dictionary. `ru-petr1708`
+does not: its recogniser is a fine-tune, a modified version of the orus
+network, and Apache-2.0 section 4(b) requires that modification be stated. It
+is stated below.
+
+
+--------------------------------------------------------------------------------
+orus.traineddata
+--------------------------------------------------------------------------------
+
+Copyright 2025 Anastasya Bogdanova, Iskra Project
+Licensed under the Apache License, Version 2.0.
+
+    https://github.com/AButon-8/iskra_ocr
+    https://rpubs.com/AButon/orus_tesseract
+
+A fine-tune of tesseract's Russian model for pre-reform orthography, trained on
+the social-democratic newspaper «Искра» (1900–1905).
+
+`orus.traineddata` is not distributed here; it is an input you supply.
+`tools/build_orusd.sh` is what uses it, and it:
+
+  - copies its `lstm` (11775283 bytes), `lstm-unicharset` (9360 bytes) and
+    `lstm-recoder` (1201 bytes) into `orusd.traineddata` byte for byte;
+  - adds a `lstm-word-dawg` compiled from the ru_petr1708 word list below;
+  - adds a `lstm-punc-dawg` and `lstm-number-dawg` recompiled from stock
+    `rus.traineddata`.
+
+Nothing is retrained. The recogniser in `orusd` is the orus recogniser
+unchanged; only the dictionary components are new. This paragraph is the
+statement of changes required by Apache-2.0 section 4(b).
+
+`tools/build_ru_petr1708.sh` writes a second, different derivative, and here
+the recogniser is modified. `ru-petr1708.traineddata` contains:
+
+  - an `lstm` (11791699 bytes) that is the orus network fine-tuned, not
+    copied. Training continued from the orus weights with `lstmtraining` for
+    7400 iterations over synthetic renderings of pre-reform text, at a
+    positive:negative line ratio of 1:10. Every weight in the network is
+    liable to have changed. The topology is unaltered
+    (`Lfys64 → Lfx96 → Lrx96 → Lfx512 → O1c1`) and the final layer was widened
+    from 133 to 137 outputs;
+  - an `lstm-unicharset` (9658 bytes) extended from orus's 133 characters to
+    137 by the addition of Ѳ ѳ Ѵ ѵ — fita and izhitsa. The first 133 entries
+    are unchanged in content and in index order, and the `lstm-recoder`
+    (1237 bytes) is rebuilt to match;
+  - the same three dawgs, compiled afresh against the 137-entry unicharset.
+
+The purpose of the fine-tune is that orus cannot represent fita or izhitsa at
+all, so it cannot emit them whatever dictionary it is given. Adding the four
+characters is the whole of the change. This paragraph and the list above are
+the statement of changes required by Apache-2.0 section 4(b) for
+`ru-petr1708.traineddata`. The training text was generated from the
+ru_petr1708 word list below.
+
+
+--------------------------------------------------------------------------------
+Tesseract OCR
+--------------------------------------------------------------------------------
+
+Copyright (C) Google Inc. and the Tesseract contributors
+Licensed under the Apache License, Version 2.0.
+
+    https://github.com/tesseract-ocr/tesseract
+
+orus is itself a derivative of tesseract's `rus.traineddata`. Independently of
+that, `tools/build_orusd.sh` decompiles 667 punctuation patterns and 222 number
+patterns out of stock `rus.traineddata` with `dawg2wordlist` and recompiles
+them against the orus unicharset.
+
+
+--------------------------------------------------------------------------------
+ru_petr1708 — Русскій Словарь въ Петровскомъ Правописаніи 1708 г.
+--------------------------------------------------------------------------------
+
+Copyright (c) 2013 Danslav Slavenskoj
+Dual-licensed: the MIT License, or the Apache License, Version 2.0, at your
+option.
+
+    http://slavenskoj.com/
+    http://slavenica.com/
+    https://code.google.com/archive/p/hunspell-ru-petr1708/
+
+The word list and this project have the same copyright holder, who grants the
+Apache-2.0 option here. The MIT grant made with version 3.1 stands and is not
+withdrawn — anyone who received the word list under MIT keeps it on those
+terms. The effect of the second option is only to let the compiled dawg travel
+under the same licence as everything it is packed with, so a redistributor of
+`orusd.traineddata` or `ru-petr1708.traineddata` has one licence to satisfy
+rather than two.
+
+Version 3.1, 2015-02-25. Included as the upstream distribution, unmodified, at
+`ru-petr1708-hunspell-3.1/`. That directory carries only the MIT text, at
+`ru-petr1708-hunspell-3.1/LICENSE.txt`, because that is what the 3.1 release
+shipped with in 2015 and it is vendored here byte for byte; it is reproduced
+below. The Apache-2.0 option is granted by this NOTICE, not by that file.
+
+`ru-petr1708` is a registered IANA language subtag under ISO 639, for Russian
+in the orthography running from the Petrine reform of 1708 to that of 1917.
+
+Of its 1430220 forms, 1425045 are compiled into `orusd.lstm-word-dawg` and
+1427175 into `ru-petr1708.lstm-word-dawg` — a substantial portion in both
+cases. A redistributor taking the Apache-2.0 option satisfies that licence by
+shipping this NOTICE and the LICENSE file. One taking MIT instead must carry
+the notice below.
+
+    The MIT License (MIT)
+
+    Copyright (c) 2013 Danslav Slavenskoj
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+
+
+--------------------------------------------------------------------------------
+If you redistribute either model
+--------------------------------------------------------------------------------
+
+    orusd.traineddata
+    sha256 = 7001bc2228c74173fc755acbec54ad7cc0f0f9b1b55cfb0db2658e2e07cb5db4
+
+    ru-petr1708.traineddata
+    sha256 = 659bfad16265836d472c98be7de7d6cb1ffedc9cacac8567b4e4063e3f1ff94a
+
+Each is a combined derivative of three works: the orus recogniser, the
+tesseract-derived punctuation and number patterns, and the ru_petr1708 word
+list. The first two are Apache-2.0 only; the word list is available under
+Apache-2.0 by the dual-licence above. The whole file may therefore be
+redistributed under Apache-2.0 alone, which is satisfied by shipping this
+NOTICE and the LICENSE file with it.
+
+Taking the word list under MIT instead remains permitted, and then the MIT
+notice travels too. Nothing turns on the choice — neither licence restricts the
+use, and the dual grant exists to remove a bookkeeping step, not to change what
+anyone may do.
