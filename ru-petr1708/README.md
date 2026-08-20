@@ -1,6 +1,14 @@
-tesseract model for Russian books in Petrine Orthography, mostly printed between Peter's civil-type reform of 1708 and the orthographic reform of 1918.
+# **ru-petr1708.traineddata**
 
-ru-petr1708.traineddata
+
+
+**ru-petr1708 **tesseract model for Russian books in Petrine Orthography, mostly printed between Peter's civil-type reform of 1708 and the orthographic reform of 1918.
+
+This is a fine tuning and expansion of **orus.traineddata** (see credits) which itself is a tuning of the standard Russian model **rus.traineddata**.
+
+The **ru-petr1708 model** includes the fita and izhitsa letters missing in **orus**, a dawg dictionary based on **ru_petr1708** (2015). The punctuation and number lists were read out of stock **rus.traineddata** with dawg2wordlist and recompiled.
+
+ru-petr1708  is a language and locale code representing the Russian language in Petrine/traditional pre-1918 orthography. It is used to distinguish historical spelling rules—such as the use of letters like ѣ (yat), ѳ (theta), і (i decimal), and final hard signs (ъ)—from modern Russian. 
 
 ## Credits and licence
 
