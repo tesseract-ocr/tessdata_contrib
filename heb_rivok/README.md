@@ -32,20 +32,26 @@ SHA-256:
 
 ## Results
 
-Character error rate (lower is better) unless marked; `fast` files except the `script/Hebrew`
-column (tessdata_best, its starting point), Tesseract 5.5.0.
+Character error rate (lower is better) unless marked, Tesseract 5.5.0. The model is compared with the
+tessdata_best model it was fine-tuned from, float against float, with our `fast/` file (int8) next to
+it. The last column is `heb` from tessdata_fast, the Ubuntu/Debian package: a smaller, separately
+trained network (last layer 128 units against 192 in tessdata_best `heb`), not an int8 copy of
+tessdata_best.
 
-| test | `heb` (tessdata_fast, the Ubuntu/Debian package) | `script/Hebrew` (tessdata_best) | heb_rivok 1.0.1 | **heb_rivok 2.0** |
+| test | `script/Hebrew` (tessdata_best, float) | **heb_rivok 2.0 best (float)** | heb_rivok 2.0 fast (int8) | `heb` (tessdata_fast, the Ubuntu/Debian package) |
 |---|---:|---:|---:|---:|
-| 150 line crops from real Hebrew documents, Hebrew only (`--psm 13`) | 4.7% | 4.0% | 1.4% | **1.2%** |
-| 253 line crops from real documents, with numbers | 4.5% | 3.5% | 1.6% | **1.6%** |
-| Four old books (1872–1922), 1,087 lines | 11.3% | 7.8% | 8.1% | **2.7%** |
-| … the vowelled Selichot 1885: vowel marks read (higher is better) | 23% | 56% | 50% | **82%** |
-| [GlotOCR-bench](https://huggingface.co/datasets/cis-lmu/GlotOCR-bench) Hebrew, clean images (`--psm 6`) | 21.2% | 20.7% | 18.5% | **10.9%** |
-| GlotOCR-bench Hebrew, "old document" images | 34.0% | 31.8% | 30.1% | **25.0%** |
-| [HaZefira](https://github.com/omilab/historical_press) newspaper (1874/1887), 4,013 line crops | 17.5% | 14.3% | 9.9% | **4.8%** |
-| HaZefira, 34 pages: words found (word F1, higher is better) | 67.6% | 75.5% | 81.3% | **92.1%** |
+| 150 line crops from real Hebrew documents, Hebrew only (`--psm 13`) | 4.0% | **1.2%** | 1.2% | 4.7% |
+| 253 line crops from real documents, with numbers | 3.5% | **1.6%** | 1.6% | 4.5% |
+| Four old books (1872–1922), 1,087 lines | 7.8% | **2.6%** | 2.7% | 11.3% |
+| … the vowelled Selichot 1885: vowel marks read (higher is better) | 56% | **82%** | 82% | 23% |
+| [GlotOCR-bench](https://huggingface.co/datasets/cis-lmu/GlotOCR-bench) Hebrew, clean images (`--psm 6`) | 20.7% | **11.0%** | 10.9% | 21.2% |
+| GlotOCR-bench Hebrew, "old document" images | 31.8% | **24.5%** | 25.0% | 34.0% |
+| [HaZefira](https://github.com/omilab/historical_press) newspaper (1874/1887), 4,013 line crops | 14.3% | **4.8%** | 4.8% | 17.5% |
+| HaZefira, 34 pages: words found (word F1, higher is better) | 75.5% | **92.2%** | 92.1% | 67.6% |
+| 209 line crops mixing Hebrew and English | 16.4% | **14.4%** | 14.3% | 19.3% |
 
+- **Settings:** `script/Hebrew` and `heb_rivok` include Latin and run alone; `heb` (tessdata_fast) runs
+  with `+eng` on pages and mixed lines.
 - **Data:** the line crops come from private documents and can't be shared. The four old books are
   public-domain scans (Wikimedia Commons) with their validated Hebrew Wikisource transcriptions; no
   page of them was used in training. GlotOCR-bench and HaZefira are public, and the repository's
