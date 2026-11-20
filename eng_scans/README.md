@@ -30,8 +30,13 @@ the trained weights are written back into the `.traineddata` file in place, and 
 No test line, and no FUNSD or SROIE image, was used in training. `fast/eng_scans.traineddata` is the same model
 converted to 8-bit with `combine_tessdata -c`.
 
-**Code and data.** Generator, trainer, export and evaluation:
-https://github.com/oaustegard/experiments/tree/main/tesseract-gpu (`run/ft/`, `tessgpu/tessnet.py`,
-`results/ft_eval.json`).
+**Code and data.** Everything that produced this model, in the tesseract-gpu experiment
+(https://github.com/oaustegard/experiments/tree/main/tesseract-gpu):
+
+- training-line generator, CORD extraction, trainer and Kaggle job: https://github.com/oaustegard/experiments/tree/main/tesseract-gpu/run/ft
+- the PyTorch copy of Tesseract's network and the in-place `.traineddata` export: https://github.com/oaustegard/experiments/blob/main/tesseract-gpu/tessgpu/tessnet.py
+- evaluation script and scores: https://github.com/oaustegard/experiments/blob/main/tesseract-gpu/run/ft/eval_models.py, https://github.com/oaustegard/experiments/blob/main/tesseract-gpu/results/ft_eval.json
+- write-up (Finding 13): https://github.com/oaustegard/experiments/blob/main/tesseract-gpu/RESULTS.md
+- this folder as submitted: https://github.com/oaustegard/experiments/tree/main/tesseract-gpu/contrib/eng_scans
 
 **Licence.** Apache-2.0, as a modified version of tessdata_best `eng` (Apache-2.0).
